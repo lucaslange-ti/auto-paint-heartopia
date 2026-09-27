@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>AutoPaint.App</RootNamespace>
+    <AssemblyName>AutoPaintHeartopia</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+
+    <!-- Ponto de entrada próprio (Program.Main) para o Velopack rodar antes do
+         WPF. Isso exige que App.xaml deixe de ser ApplicationDefinition (que
+         geraria um Main automático concorrente) e vire Page — ver ItemGroup
+         abaixo. As flags de publicação (single-file / self-contained) ficam nos
+         scripts: build/publish.ps1 (portátil) e build/release.ps1 (Velopack). -->
+    <StartupObject>AutoPaint.App.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoPaint.Core\AutoPaint.Core.csproj" />
+    <ProjectReference Include="..\AutoPaint.Platform.Windows\AutoPaint.Platform.Windows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4191.47" />
+    <PackageReference Include="Serilog" Version="4.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Velopack" Version="1.2.0" />
+  </ItemGroup>
+
+  <!-- UI web embutida: os arquivos de wwwroot vão junto do exe e são mapeados
+       via SetVirtualHostNameToFolderMapping (https://app.local). Enquanto o
+       projeto Svelte em /ui não é buildado, existe um index.html placeholder. -->
+  <ItemGroup>
+    <Content Include="wwwroot\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+artifacts/
+publish/
+Releases/
+TestResults/
+
+# Node / UI
+node_modules/
+ui/dist/
+src/AutoPaint.App/wwwroot/assets/
+
+# Logs / local
+*.log
+.DS_Store
+
+# Documentação interna — fica só na máquina local, não vai pro GitHub.
+docs/
+
+# Segredos — NUNCA versionar. Token do GitHub vai em variável de ambiente.
+.env
+.env.*
+*.local
+*token*.txt
+*secret*

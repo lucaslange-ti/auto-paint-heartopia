@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D59A70E9-83AA-43B4-B605-8D0EA4199CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPaint.Core", "src\AutoPaint.Core\AutoPaint.Core.csproj", "{E77A65B6-80D6-48AF-B129-636CA14C267C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPaint.Platform.Windows", "src\AutoPaint.Platform.Windows\AutoPaint.Platform.Windows.csproj", "{5827BD69-F74B-4859-8B2C-45370FBBC0C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPaint.App", "src\AutoPaint.App\AutoPaint.App.csproj", "{0B475674-B040-43E3-8A65-7DC97C6D822C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPaint.Tests", "src\AutoPaint.Tests\AutoPaint.Tests.csproj", "{4D980017-BE01-4E40-9497-9915F62F5F50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E77A65B6-80D6-48AF-B129-636CA14C267C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77A65B6-80D6-48AF-B129-636CA14C267C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77A65B6-80D6-48AF-B129-636CA14C267C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77A65B6-80D6-48AF-B129-636CA14C267C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5827BD69-F74B-4859-8B2C-45370FBBC0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5827BD69-F74B-4859-8B2C-45370FBBC0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5827BD69-F74B-4859-8B2C-45370FBBC0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5827BD69-F74B-4859-8B2C-45370FBBC0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B475674-B040-43E3-8A65-7DC97C6D822C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B475674-B040-43E3-8A65-7DC97C6D822C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B475674-B040-43E3-8A65-7DC97C6D822C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B475674-B040-43E3-8A65-7DC97C6D822C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D980017-BE01-4E40-9497-9915F62F5F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D980017-BE01-4E40-9497-9915F62F5F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D980017-BE01-4E40-9497-9915F62F5F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D980017-BE01-4E40-9497-9915F62F5F50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E77A65B6-80D6-48AF-B129-636CA14C267C} = {D59A70E9-83AA-43B4-B605-8D0EA4199CE3}
+		{5827BD69-F74B-4859-8B2C-45370FBBC0C4} = {D59A70E9-83AA-43B4-B605-8D0EA4199CE3}
+		{0B475674-B040-43E3-8A65-7DC97C6D822C} = {D59A70E9-83AA-43B4-B605-8D0EA4199CE3}
+		{4D980017-BE01-4E40-9497-9915F62F5F50} = {D59A70E9-83AA-43B4-B605-8D0EA4199CE3}
+	EndGlobalSection
+EndGlobal

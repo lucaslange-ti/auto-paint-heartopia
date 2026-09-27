@@ -1,0 +1,13 @@
+# Normaliza fim de linha: no repo fica LF, no checkout do Windows fica CRLF.
+* text=auto
+
+*.sh   text eol=lf
+*.ps1  text eol=crlf
+*.cs   text
+*.csproj text
+*.sln  text
+
+# Binários — nunca fazer diff/merge de texto.
+*.png  binary
+*.ico  binary
+*.jpg  binary

@@ -1,0 +1,22 @@
+<Project>
+  <!-- Configuração compartilhada por todos os projetos da solução. -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+
+    <!-- Versão semântica única do produto. O release.ps1 sobrescreve via
+         -Version; mantenha este valor em sincronia com o último publicado. -->
+    <Version>1.0.0</Version>
+    <Product>Auto Paint Heartopia</Product>
+    <Company>Auto Paint Heartopia</Company>
+
+    <!-- .NET 8 é o SDK disponível na máquina hoje. Migrar para net10.0-windows
+         (LTS) é uma troca de TFM quando o SDK 10 estiver instalado — ver
+         docs/arquitetura.md secao 1. -->
+  </PropertyGroup>
+</Project>
